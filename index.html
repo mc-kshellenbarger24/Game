@@ -1,9 +1,47 @@
 <!DOCTYPE html>
 <html lang="en-us">
   <head>
-
   </head>
   <body style = "padding: 0px; margin: 0px; overflow: hidden;">
     <iframe src="https://i.simmer.io/@kshellenbarger/test" style="position: absolute; width: 100vw; height: 100vh;"></iframe>
   </body>
 </html>
+
+
+
+
+<!--
+<script src="https://accounts.google.com/gsi/client" onload="initClient()" async defer></script>
+
+const APIKEY = "1019198432263-683081q1rd1oo4n5acmv6q3h84fiktcj.apps.googleusercontent.com"
+var access_token
+var GoogleClient 
+
+GoogleClient = google.accounts.oauth2.initTokenClient({
+  client_id: APIKEY,
+  scope: 'https://www.googleapis.com/auth/userinfo.profile',
+  callback: (tokenResponse) => {
+      access_token = tokenResponse.access_token;
+  },
+})  
+
+function getToken() {
+  client.requestAccessToken();
+}
+
+function GetUserInfo(){
+  var xhr = new XMLHttpRequest();
+  xhr.open('GET','https://www.googleapis.com/oauth2/v1/userinfo' +'?access_token='+encodeURIComponent(access_token));
+  xhr.setRequestHeader('Content-Type','application/json')
+  xhr.send();   
+  xhr.onreadystatechange = function(){
+      if (this.readyState == 4 && this.status == 200) {
+          var Data = JSON.parse(this.responseText);
+          SetData(Data);
+      }
+  }
+}
+
+function SetData(Data){
+    console.log(Data)
+}-->
